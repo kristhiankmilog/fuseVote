@@ -15,6 +15,8 @@ Además los usuarios que deseen podrán realizar intercambios de videojuegos con
 * Kristhian Camilo Gómez Hernández
 
 ## Enlaces:
-* Repositorio GIT: https://github.com/BrotherGames/BrotherGames.git
+* Repositorio GIT ANGULAR: https://github.com/BrotherGames/BrotherGames-Angular.git
+* Repositorio GIT SPRING: https://github.com/BrotherGames/BrotherGames-Spring.git
+* Repositorio GIT ANDROID: https://github.com/BrotherGames/BrotherGames-Android.git
 * Proyecto CircleCI: 
 
