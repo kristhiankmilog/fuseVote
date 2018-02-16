@@ -531,7 +531,11 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/home-page/home-page.component.html":
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<p>\n  BrotherGames\n</p>"
+=======
+module.exports = "<p>\r\n  BrotherGames\r\n</p>"
+>>>>>>> LoginScreenAngular
 
 /***/ }),
 
