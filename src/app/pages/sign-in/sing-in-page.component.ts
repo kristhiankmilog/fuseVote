@@ -17,8 +17,8 @@ export class SingInPageComponent implements OnInit {
     public usersService: UsersService,
     public formBuilder: FormBuilder,
     public router: Router,
-  ) { 
-    
+  ) {
+
   }
 
   ngOnInit() {
@@ -35,7 +35,6 @@ export class SingInPageComponent implements OnInit {
         this.router.navigate(['tasks']);
       }, error => {
         this.loginError = 'Error Signing in: ' + (error && error.message ? error.message : '');
-      })
+      });
   }
-
 }

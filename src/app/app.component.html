@@ -3,34 +3,36 @@
     aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  <a class="navbar-brand" href="#">COSW Angular4</a>
+  <a class="navbar-brand" href="#">BrotherGames</a>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="/" routerLink="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="/users" routerLink="/users">Users</a>
+        <a class="nav-link" routerLinkActive="/users" routerLink="/users">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="/editUsers" routerLink="/editUsers">Edit User</a>
+        <a class="nav-link" routerLinkActive="/tasks" routerLink="/tasks">Games</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="/tasks" routerLink="/tasks">Task</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="/edit" routerLink="/edit">Edit Task</a>
+        <a class="nav-link" routerLinkActive="/edit" routerLink="/edit">Games Exchange</a>
       </li>
       <li *ngIf="isLoggedIn()" class="nav-item">
         <a href="#" class="nav-link" (click)="signOut()">(Sign Out)</a>
       </li>
     </ul>
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Sign in<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/editUsers">Sign up<span class="sr-only">(current)</span></a>
+        </li>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-
 </nav>
 <div class="container">
   <router-outlet></router-outlet>
