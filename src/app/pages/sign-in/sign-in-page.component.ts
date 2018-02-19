@@ -4,13 +4,13 @@ import { Router } from '@angular/router';
 import { UsersService } from '../../services/users.service';
 
 @Component({
-  selector: 'app-sing-in-page',
-  templateUrl: './sing-in-page.component.html',
-  styleUrls: ['./sing-in-page.component.css']
+  selector: 'app-sign-in-page',
+  templateUrl: './sign-in-page.component.html',
+  styleUrls: ['./sign-in-page.component.css']
 })
 
 
-export class SingInPageComponent implements OnInit {
+export class SignInPageComponent implements OnInit {
   signInForm: FormGroup;
   loginError: String;
   constructor(

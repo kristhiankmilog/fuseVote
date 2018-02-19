@@ -19,14 +19,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { TodoService } from './services/todo.service';
 import { HttpModule } from '@angular/http';
-import { SingInPageComponent } from './pages/sign-in/sing-in-page.component';
+import { SignInPageComponent } from './pages/sign-in/sign-in-page.component';
 import { AuthService } from './common/auth.service';
 import { AppDataService } from './common/app-data.service';
 import { UsersService } from './services/users.service';
 
+import { RegisterComponent } from './pages/register-page/register-page.component';
+
 const ROUTES = [
-  { path: '', component: SingInPageComponent },
-  { path: 'home', component: HomePageComponent },
+    { path: '', component: SignInPageComponent },
+
+    {path: 'register' , component: RegisterComponent},
+
+    { path: 'home', component: HomePageComponent },
+
   {
     path: 'users', component: UserListPageComponent,
     canActivate: [AuthService],
@@ -51,14 +57,15 @@ const ROUTES = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomePageComponent,
-    TaskListPageComponent,
-    TaskEditPageComponent,
-    PageNotFoundComponent,
-    SingInPageComponent,
-    UserEditPageComponent,
-    UserListPageComponent,
+      AppComponent,
+      HomePageComponent,
+      TaskListPageComponent,
+      TaskEditPageComponent,
+      PageNotFoundComponent,
+      SignInPageComponent,
+      UserEditPageComponent,
+      UserListPageComponent,
+      RegisterComponent,
   ],
   imports: [
     BrowserModule,
