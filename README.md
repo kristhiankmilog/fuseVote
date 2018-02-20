@@ -8,7 +8,7 @@ Informar a los usuarios los precios de los videojuegos que se encuentran actualm
 
 Además los usuarios que deseen podrán realizar intercambios de videojuegos con otros usuarios.
 ## Autores
-* Jessica Fresneda Hernández
+* Jessica Catherine Fresneda Hernández
 * Carol Johana Meneses Pineda
 * Maria Paula Pinzón Cardozo
 * Camilo Alexander García Cabrera
