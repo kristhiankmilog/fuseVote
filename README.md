@@ -18,5 +18,5 @@ Además los usuarios que deseen podrán realizar intercambios de videojuegos con
 * Repositorio GIT ANGULAR: https://github.com/BrotherGames/BrotherGames-Angular.git
 * Repositorio GIT SPRING: https://github.com/BrotherGames/BrotherGames-Spring.git
 * Repositorio GIT ANDROID: https://github.com/BrotherGames/BrotherGames-Android.git
-* Proyecto CircleCI: 
+* Proyecto CircleCI: xxxxx
 
