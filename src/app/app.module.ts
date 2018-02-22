@@ -27,7 +27,9 @@ import { UsersService } from './services/users.service';
 import { RegisterComponent } from './pages/register-page/register-page.component';
 
 const ROUTES = [
-    { path: '', component: SignInPageComponent },
+    { path: '', component: HomePageComponent },
+
+    { path: 'signin', component: SignInPageComponent },
 
     {path: 'register' , component: RegisterComponent},
 

@@ -1,5 +1,12 @@
 <div class="container">
-    <h2>Register</h2>
+    <br>
+    <div id="centerbrand">
+        <img id="brand"  src="/assets/images/videojuegos.jpg" width="170" height="80">
+    </div>
+    <h2 class="text-center">REGISTER TO BROTHERS GAMES</h2>
+    <br>
+    <br>
+
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
 
         <div class="form-group">
@@ -16,10 +23,10 @@
             <label for="priority">Password</label>
             <input type="password" class="form-control" id="password" formControlName="password" required>
         </div>
-
-        <button type="submit" class="btn btn-success" [disabled]="!registerForm.valid">Register</button>
-
-        <!--<p class="text-danger mt-1" *ngIf="loginError">{{loginError}}</p>-->
+        <br>
+        <button type="submit" class="btn btn-success" [disabled]="!registerForm.valid">REGISTER</button>
 
     </form>
 </div>
+
+
