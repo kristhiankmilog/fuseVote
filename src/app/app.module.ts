@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { TaskListPageComponent } from './pages/task-list-page/task-list-page.component';
 import { TaskEditPageComponent } from './pages/task-edit-page/task-edit-page.component';
+import { ChangeListPageComponent } from './pages/change-list-page/change-list-page.component';
+import { ChangeEditPageComponent } from './pages/change-edit-page/change-edit-page.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { UserEditPageComponent } from './pages/user-edit-page/user-edit-page.component';
 import { UserListPageComponent } from './pages/user-list-page/user-list-page.component';
@@ -22,6 +24,7 @@ import { HttpModule } from '@angular/http';
 import { SignInPageComponent } from './pages/sign-in/sign-in-page.component';
 import { AuthService } from './common/auth.service';
 import { AppDataService } from './common/app-data.service';
+import { ChangeService } from './services/change.service';
 import { UsersService } from './services/users.service';
 
 import { RegisterComponent } from './pages/register-page/register-page.component';
@@ -48,7 +51,11 @@ const ROUTES = [
     canActivate: [AuthService],
   },
   {
-    path: 'edit', component: TaskEditPageComponent ,
+    path: 'listChanges', component: ChangeListPageComponent ,
+    canActivate: [AuthService],
+  },
+  {
+    path: 'editChanges', component: ChangeEditPageComponent ,
     canActivate: [AuthService],
   },
   {
@@ -68,6 +75,9 @@ const ROUTES = [
       UserEditPageComponent,
       UserListPageComponent,
       RegisterComponent,
+      ChangeListPageComponent,
+      ChangeEditPageComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -88,6 +98,7 @@ const ROUTES = [
     AuthService,
     AppDataService,
     UsersService,
+    ChangeService,
     AppConfiguration],
   bootstrap: [AppComponent]
  })
