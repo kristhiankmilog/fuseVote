@@ -8,21 +8,21 @@ import 'rxjs/add/observable/of';
 @Injectable()
 export class NewGameService {
    private newGames: NewGame[]=[
-     new NewGame('FIFA 18','Developed and published by Electronic Arts and was released worldwide on 29 September 2017 for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One and Nintendo Switch. It is the 25th instalment in the FIFA series. Real Madrid forward Cristiano Ronaldo appears as the cover athlete of the regular edition. Ronaldo Nazario appears on the icon edition of the game'
-
-                            ,null)
-
+     new NewGame('Need for Speed',' It is a franchise of video game of racing action created by Electronic Arts and currently developed by Ghost Games . ',"https://images.sftcdn.net/images/t_optimized,f_auto/p/5c8d74c2-9b24-11e6-82eb-00163ec9f5fa/1451573144/need-for-speed-carbono-screenshot.jpg"),
+     new NewGame('FIFA17','eSTE ES UN JUEGO DE FOOTBOOL2','NULL'),
+     new NewGame('FIFA11','eSTE ES UN JUEGO DE FOOTBOOL3','NULL')
 
    ];
     constructor(){}
-  
+
+     list(): NewGame[] {
+             return this.newGames;
+           }
       create(name: string, description: string, photo:string){
-        this.newGames.push(new NewGame(name,description,photo));
+        this.newGames.push(new NewGame(name,description,photo))
 
       }
       
-      list(): NewGame[] {
-        return this.newGames;
-      }
+
 
 }

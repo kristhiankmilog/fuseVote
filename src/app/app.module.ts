@@ -45,7 +45,7 @@ const ROUTES = [
   },
   {
     path: 'searchGame', component: SearchGameListPageComponent ,
-    canActivate: [AuthService],
+
   },
   {
     path: 'edit', component: SearchGameEditPageComponent ,

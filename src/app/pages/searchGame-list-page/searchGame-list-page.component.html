@@ -5,13 +5,14 @@
        <th></th>
        <th>Name</th>
      <th>Description</th>
-
+   
+   </tr>
+   <tr *ngFor="let newGame of newGames">
+    <td>{{newGame.name}}</td>
+    <td>{{newGame.description}}</td>
+    <td>{{newGame.photo}}</td>
+  
    </tr>
  </thead>
- <tr *ngFor="let todo of todos">
-     <td>{{newGame.name}}</td>
-   <td>{{newGame.description}}</td>
-   <td>{{newGame.photo}}</td>
 
- </tr>
 </table>
