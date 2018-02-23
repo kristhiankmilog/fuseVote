@@ -30,7 +30,7 @@ const ROUTES = [
     { path: '', component: HomePageComponent },
 
     { path: 'signin', component: SignInPageComponent },
-
+    { path: 'searchGames', component: SearchGameListPageComponent},
     {path: 'register' , component: RegisterComponent},
 
     { path: 'home', component: HomePageComponent },
