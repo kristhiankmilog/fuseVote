@@ -52,11 +52,11 @@ const ROUTES = [
   },
   {
     path: 'listChanges', component: ChangeListPageComponent ,
-    canActivate: [AuthService],
+    
   },
   {
     path: 'editChanges', component: ChangeEditPageComponent ,
-    canActivate: [AuthService],
+    
   },
   {
     path: '**', component: PageNotFoundComponent
