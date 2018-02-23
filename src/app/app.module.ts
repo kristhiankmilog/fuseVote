@@ -13,6 +13,8 @@ import { TaskEditPageComponent } from './pages/task-edit-page/task-edit-page.com
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { UserEditPageComponent } from './pages/user-edit-page/user-edit-page.component';
 import { UserListPageComponent } from './pages/user-list-page/user-list-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { EditProfilePageComponent } from './pages/edit-profile-page/edit-profile-page.component';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -32,6 +34,9 @@ const ROUTES = [
     { path: 'signin', component: SignInPageComponent },
 
     {path: 'register' , component: RegisterComponent},
+
+    {path: 'profile' , component: ProfilePageComponent},
+    {path: 'editProfile' , component: EditProfilePageComponent},
 
     { path: 'home', component: HomePageComponent },
 
@@ -68,6 +73,8 @@ const ROUTES = [
       UserEditPageComponent,
       UserListPageComponent,
       RegisterComponent,
+      ProfilePageComponent,
+      EditProfilePageComponent,
   ],
   imports: [
     BrowserModule,
