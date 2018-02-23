@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../../services/todo.service';
-import { Todo } from '../../models/todo';  
+import { NewGameService} from '../../services/newGame.service';
+import { NewGame } from '../../models/newGame';
 
 @Component({
   selector: 'app-searchGame-list-page',
@@ -8,16 +8,15 @@ import { Todo } from '../../models/todo';
   styleUrls: ['./searchGame-list-page.component.css']
 })
 export class SearchGameListPageComponent implements OnInit {
-  private todos: Todo[] = [];
-  constructor(public todoService: TodoService) {
+  private newGames: NewGame[] = [];
+  constructor(public newGameService:NewGameService) {
     
       }
 
       ngOnInit() {
-        this.todoService.list().subscribe(todosResponse => {
-          this.todos = todosResponse;
-        })
+            this.newGames=this.newGameService.list();
+        }
       }
     
-    }
+    
     

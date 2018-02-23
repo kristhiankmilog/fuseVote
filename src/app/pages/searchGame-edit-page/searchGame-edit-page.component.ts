@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../../services/todo.service';
-import { Todo } from '../../models/todo';
+import { NewGameService} from '../../services/newGame.service';
+import { NewGame } from '../../models/newGame';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -10,35 +10,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./searchGame-edit-page.component.css']
 })
 export class SearchGameEditPageComponent implements OnInit {
-  todoForm: FormGroup;
-  constructor(public todoService: TodoService,
+  newGameForm: FormGroup;
+  constructor(public newGameService: NewGameService,
     public formBuilder: FormBuilder,
     public router: Router
   ) {
   }
 
   ngOnInit() {
-    this.todoForm = this.formBuilder.group({
+    this.newGameForm = this.formBuilder.group({
+    name:'',
     description: '',
-    completed: '',
-    priority: ''
+    photo: ''
   });
 
 }
 
 onSubmit() {
-  this.todoService.create(
-    this.todoForm.get('description').value,
-    this.todoForm.get('priority').value,
-    Boolean(this.todoForm.get('completed').value)
-  ).subscribe(serverResponse=>{
-      this.router.navigate(['/searchGames']);
-  }, error=>{
-    console.log(error);
-  });
+  this.newGameService .create(
+  this.newGameForm.get('name').value,
+    this.newGameForm.get('description').value,
+    this.newGameForm.get('photo').value
+
+  );
 
 
-  this.router.navigate(['/searchGames']);
+  this.router.navigate(['/searchGame']);
 }
 
 }

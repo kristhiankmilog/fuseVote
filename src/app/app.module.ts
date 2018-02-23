@@ -17,7 +17,7 @@ import { UserListPageComponent } from './pages/user-list-page/user-list-page.com
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { TodoService } from './services/todo.service';
+import { NewGameService } from './services/newGame.service';
 import { HttpModule } from '@angular/http';
 import { SignInPageComponent } from './pages/sign-in/sign-in-page.component';
 import { AuthService } from './common/auth.service';
@@ -84,7 +84,7 @@ const ROUTES = [
         apiURL: 'http://localhost:8080'
       }
     },
-    TodoService,
+    NewGameService,
     AuthService,
     AppDataService,
     UsersService,
