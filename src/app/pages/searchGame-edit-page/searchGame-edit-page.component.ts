@@ -32,13 +32,13 @@ onSubmit() {
     this.todoForm.get('priority').value,
     Boolean(this.todoForm.get('completed').value)
   ).subscribe(serverResponse=>{
-      this.router.navigate(['/searchGame']);
+      this.router.navigate(['/searchGames']);
   }, error=>{
     console.log(error);
   });
 
 
-  this.router.navigate(['/searchGame']);
+  this.router.navigate(['/searchGames']);
 }
 
 }
