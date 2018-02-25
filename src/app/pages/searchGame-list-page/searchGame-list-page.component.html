@@ -8,9 +8,10 @@
    
    </tr>
    <tr *ngFor="let newGame of newGames">
-    <td>{{newGame.name}}</td>
+       <td><img [src]="newGame.photo" width="150" height="150" /></td>
+       <td>{{newGame.name}}</td>
     <td>{{newGame.description}}</td>
-    <td>{{newGame.photo}}</td>
+
   
    </tr>
  </thead>

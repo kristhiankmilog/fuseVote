@@ -4,7 +4,7 @@ export class NewGame {
         private photo:string;
 
     
-        constructor(name: string, description: string, photo:string){
+        constructor(photo:string,name: string, description: string){
             this.name= name;
             this.description = description;
             this.photo = photo;

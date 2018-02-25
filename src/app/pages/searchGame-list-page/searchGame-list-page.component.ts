@@ -8,10 +8,7 @@ import { NewGame } from '../../models/newGame';
   styleUrls: ['./searchGame-list-page.component.css']
 })
 export class SearchGameListPageComponent implements OnInit {
-  private newGames: NewGame[] = [
-
-  new NewGame('--------','-------',''),
-  ];
+  private newGames: NewGame[] = [];
   constructor(public newGameService:NewGameService) {
     
       }
