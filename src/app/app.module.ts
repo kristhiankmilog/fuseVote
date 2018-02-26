@@ -15,7 +15,7 @@ import { ChangeEditPageComponent } from './pages/change-edit-page/change-edit-pa
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { UserEditPageComponent } from './pages/user-edit-page/user-edit-page.component';
 import { UserListPageComponent } from './pages/user-list-page/user-list-page.component';
-
+import { ExchangeListComponent } from './pages/exchange-list-page/exchange-list-page.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -59,6 +59,10 @@ const ROUTES = [
     
   },
   {
+    path: 'listexChanges', component: ExchangeListComponent ,
+    
+  },
+  {
     path: '**', component: PageNotFoundComponent
   }
 
@@ -76,6 +80,7 @@ const ROUTES = [
       UserListPageComponent,
       RegisterComponent,
       ChangeListPageComponent,
+      ExchangeListComponent,
       ChangeEditPageComponent,
 
   ],

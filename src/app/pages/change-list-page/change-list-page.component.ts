@@ -8,7 +8,9 @@ import { Change } from '../../models/change';
   styleUrls: ['./change-list-page.component.css']
 })
 export class ChangeListPageComponent implements OnInit {
-  private changes: Change[] = [];
+  private changes: Change[] = [
+    new Change(1,"","","","",true),
+  ];
   constructor(public changeService: ChangeService) {
     
       }
