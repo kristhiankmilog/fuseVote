@@ -54,11 +54,11 @@ const ROUTES = [
   },
   {
     path: 'listChanges', component: ChangeListPageComponent ,
-    
+    canActivate: [AuthService],
   },
   {
     path: 'editChanges', component: ChangeEditPageComponent ,
-    
+    canActivate: [AuthService],
   },
   {
     path: 'okChanges', component: ChangeOkListPageComponent ,
@@ -70,7 +70,7 @@ const ROUTES = [
   },
   {
     path: 'listexChanges', component: ExchangeListComponent ,
-    
+    canActivate: [AuthService],
   },
   {
     path: '**', component: PageNotFoundComponent
