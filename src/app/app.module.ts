@@ -25,6 +25,7 @@ import { AppDataService } from './common/app-data.service';
 import { UsersService } from './services/users.service';
 
 import { RegisterComponent } from './pages/register-page/register-page.component';
+import { ContentGamesComponent } from './pages/content-games/content-games.component';
 
 const ROUTES = [
     { path: '', component: HomePageComponent },
@@ -47,6 +48,13 @@ const ROUTES = [
     path: 'searchGame', component: SearchGameListPageComponent ,
 
   },
+
+  {
+      path: 'contentGames', component: ContentGamesComponent ,
+
+    },
+
+
   {
     path: 'edit', component: SearchGameEditPageComponent ,
     canActivate: [AuthService],
@@ -68,6 +76,7 @@ const ROUTES = [
       UserEditPageComponent,
       UserListPageComponent,
       RegisterComponent,
+      ContentGamesComponent,
   ],
   imports: [
     BrowserModule,
