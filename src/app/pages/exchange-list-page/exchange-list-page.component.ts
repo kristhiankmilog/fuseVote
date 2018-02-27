@@ -12,20 +12,22 @@ import { Router } from '@angular/router';
 export class ExchangeListComponent implements OnInit {
 
     private exchanges: Change[] = [
-        new Change(1,"","","","",true),
+      new Change(1,"","","http://2.bp.blogspot.com/-uPDDofi3qOE/UM4VRppTwlI/AAAAAAAAAB0/nDW-TyihLQQ/s1600/Dead+Space+2+Caratula.jpg","",true),
+      new Change(1,"","","http://2.bp.blogspot.com/-uPDDofi3qOE/UM4VRppTwlI/AAAAAAAAAB0/nDW-TyihLQQ/s1600/Dead+Space+2+Caratula.jpg","",true),
+      new Change(1,"","","http://2.bp.blogspot.com/-uPDDofi3qOE/UM4VRppTwlI/AAAAAAAAAB0/nDW-TyihLQQ/s1600/Dead+Space+2+Caratula.jpg","",true),
+      new Change(1,"","","http://2.bp.blogspot.com/-uPDDofi3qOE/UM4VRppTwlI/AAAAAAAAAB0/nDW-TyihLQQ/s1600/Dead+Space+2+Caratula.jpg","",true),
+      
     ];
  
 
-  constructor(public todoService: ChangeService,
-    public formBuilder: FormBuilder,
-    public router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
       this.exchanges;
   }
 
   myEvent(event) {
-    this.router.navigate(['/listChanges']);
+    this.router.navigate(['/okChanges']);
   }
 
 }

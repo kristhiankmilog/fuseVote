@@ -16,6 +16,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { UserEditPageComponent } from './pages/user-edit-page/user-edit-page.component';
 import { UserListPageComponent } from './pages/user-list-page/user-list-page.component';
 import { ExchangeListComponent } from './pages/exchange-list-page/exchange-list-page.component';
+import { ChangeOkListPageComponent } from './pages/change-list-page/changeOk-list-page.component';
+import { CodeAcceptPageComponent } from './pages/code-accept-page/code-accept-page.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -59,6 +61,14 @@ const ROUTES = [
     
   },
   {
+    path: 'okChanges', component: ChangeOkListPageComponent ,
+    
+  },
+  {
+    path: 'code', component: CodeAcceptPageComponent ,
+    
+  },
+  {
     path: 'listexChanges', component: ExchangeListComponent ,
     
   },
@@ -81,6 +91,8 @@ const ROUTES = [
       RegisterComponent,
       ChangeListPageComponent,
       ExchangeListComponent,
+      ChangeOkListPageComponent,
+      CodeAcceptPageComponent,
       ChangeEditPageComponent,
 
   ],
