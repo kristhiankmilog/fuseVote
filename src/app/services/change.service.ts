@@ -11,10 +11,7 @@ import 'rxjs/add/observable/of';
 export class ChangeService extends APIService{
   private resourceUrl = 'api/change';
   private cont = 0;
-  private changes: Change[] = [
-      new Change(1,'asdasd','asdasdasd','asdasdasd','asdasdasd',true),
-
-  ];
+  private changes: Change[] = [];
   
       create(value0:string,value1:string,value2:string,value3:string,bool:boolean):Observable<Change>{
         this.cont+=1;
