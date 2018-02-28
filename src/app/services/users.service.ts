@@ -67,12 +67,12 @@ updateUser(name: string, email: string, image: string, password: string) {
 
 getUser(email:string){
 
-  return this.get(this.resourceUrl+'/'+1)
+  return this.get(this.resourceUrl+'/'+email)
 
 }
 currentUser(){
 
-  return this.get(this.resourceUrl+'/'+sessionStorage.getItem("username"));
+  return this.get(this.resourceUrl+'/'+sessionStorage.getItem("email"));
 
 }
 }

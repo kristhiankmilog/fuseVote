@@ -21,16 +21,7 @@ export class User {
         this._password = password;
 
         this._id = id;
-
-
-
-
-
     }
-
-
-
-
 
     get id(): Number {
 

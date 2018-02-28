@@ -3,33 +3,34 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4>User Profile</h4>
-            </div>
-                <div class="panel-body">
-                    <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                        <img src="user.image" width="200" height="200"  *ngFor="let user of users">
-
-
-                    </div>
-                    <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
-                        <div class="container">
-                        </div>
-                        <hr>
-                        <ul class="container details">
-                            <table>
-                                <tr *ngFor="let user of users">
-                                    Name: <td>{{user.firstname}}</td>
-                                    Email: <td>{{user.email}}</td>
-                                </tr>
-                            </table>
-                        </ul>
-                        <hr>
-                        <button type="button" class="btn btn-primary" routerLinkActive="/editProfile" routerLink="/editProfile">Edit Profile</button>
-                    </div>
-                </div>
+    <form [formGroup]="userForm">
+        <div>
+            <img src={{user.image}} width="250" height="250" />
+        </div>
+        <br>
+        <br>
+        <div>
+            <p for="firstname"> <b>Name:</b></p>
+            <label id="firstname">{{user.firstname}} {{user.lastname}}</label>
         </div>
 
-    </div>
+        <div>
+            <p for="email"><b>Email:</b></p>
+            <label id="email">{{user.email}}</label>
+        </div>
+
+        <div>
+            <p for="username"><b>Username:</b></p>
+            <label id="username">{{user.username}}</label>
+        </div>
+
+        <div>
+            <p for="aboutYou"><b>About me:</b></p>
+            <label id="aboutYou">{{user.description}}</label>
+        </div>
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" routerLinkActive="/editProfile" routerLink="/editProfile">Edit Profile</button>
+    </form>
+
+</div>
