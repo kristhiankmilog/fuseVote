@@ -32,7 +32,9 @@ onSubmit() {
   this.todoUser.create(
     this.todoForm.get('firstname').value,
     this.todoForm.get('lastname').value,
-    this.todoForm.get('image').value
+    this.todoForm.get('image').value,
+    this.todoForm.get('username').value,
+    this.todoForm.get('description').value,
   ).subscribe(serverResponse=>{
       this.router.navigate(['/users']);
   }, error=>{

@@ -13,7 +13,7 @@ export class UsersService extends APIService {
   public users: User[] = [
     // tslint:disable-next-line:max-line-length
     // tslint:disable-next-line:whitespace
-    new User('Camilo','Garcia','http://farm6.static.flickr.com/5178/5428759578_d6fb2288a4.jpg'),
+    new User('Camilo','Garcia','http://farm6.static.flickr.com/5178/5428759578_d6fb2288a4.jpg','Souls','Gamer'),
   ];
   private resourceUrl = 'user/items';
 constructor(
@@ -35,8 +35,8 @@ constructor(
     return this.get(this.resourceUrl);
 
     }
-    create(firstname: string, lastname: string, image: string) {
-      return this.post(this.resourceUrl,new User(firstname,lastname,image));
+    create(firstname: string, lastname: string, image: string,username: string, description: string) {
+      return this.post(this.resourceUrl,new User(firstname,lastname,image,username,description));
 
 }
 }

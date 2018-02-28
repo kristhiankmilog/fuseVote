@@ -26,6 +26,8 @@ export class RegisterComponent implements OnInit {
             username: '',
             email: '',
             password: '',
+            image: '',
+            description: ''
         });
     }
 
@@ -33,7 +35,9 @@ export class RegisterComponent implements OnInit {
         this.todoUser.create(
         this.registerForm.get('username').value,
         this.registerForm.get('email').value,
-        this.registerForm.get('password').value
+        this.registerForm.get('password').value,
+        this.registerForm.get('image').value,
+        this.registerForm.get('description').value
         ).subscribe(serverResponse=>{
             this.router.navigate(['/users']);
         }, error=>{
