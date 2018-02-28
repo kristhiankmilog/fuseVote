@@ -95,17 +95,14 @@ const ROUTES = [
       UserEditPageComponent,
       UserListPageComponent,
       RegisterComponent,
-<<<<<<< HEAD
       ChangeListPageComponent,
       ExchangeListComponent,
       ChangeOkListPageComponent,
       CodeAcceptPageComponent,
       ChangeEditPageComponent,
 
-=======
       ProfilePageComponent,
       EditProfilePageComponent,
->>>>>>> ProfileConfiguration
   ],
   imports: [
     BrowserModule,
