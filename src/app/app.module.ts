@@ -23,7 +23,7 @@ import { SignInPageComponent } from './pages/sign-in/sign-in-page.component';
 import { AuthService } from './common/auth.service';
 import { AppDataService } from './common/app-data.service';
 import { UsersService } from './services/users.service';
-
+import { CommentsService } from './services/comments.service';
 import { RegisterComponent } from './pages/register-page/register-page.component';
 import { ContentGamesComponent } from './pages/content-games/content-games.component';
 
@@ -38,7 +38,7 @@ const ROUTES = [
 
   {
     path: 'users', component: UserListPageComponent,
-    canActivate: [AuthService],
+
   },
   {
     path: 'editUsers', component: UserEditPageComponent ,
@@ -56,8 +56,8 @@ const ROUTES = [
 
 
   {
-    path: 'comment', component: CommentsComponent ,
-    canActivate: [AuthService],
+    path: 'comments', component: CommentsComponent ,
+
   },
   {
     path: '**', component: PageNotFoundComponent
@@ -94,6 +94,7 @@ const ROUTES = [
       }
     },
     NewGameService,
+    CommentsService,
     AuthService,
     AppDataService,
     UsersService,
