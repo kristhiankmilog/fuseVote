@@ -7,6 +7,8 @@ import 'rxjs/add/observable/of';
 
 @Injectable()
 export class NewGameService {
+
+  
    private newGames: NewGame[]=[
      new NewGame('/assets/images/need.jpg ','Need for Speed',' It is a franchise of video game of racing action created by Electronic Arts and currently developed by Ghost Games.'),
      new NewGame('/assets/images/w.jpg ','Warcraft: Orcs & Humans','Is a strategy video game created by Blizzard Entertainment for PC. It is one of the first games of the real-time strategy or RTS genre . Warcraft: Orcs & Humans starts the Warcraft series and takes place in a medieval epic environment where humans from the mythical kingdom of Azeroth confront the invading orcs among other fantastic creatures .'),

@@ -30,21 +30,22 @@
                             <th>Link</th>
 
                         </tr>
-                        <tr *ngFor="let newGame of newGames">
-                            <td><img [src]="newGame.photo" width="150" height="150" /></td>
-                            <td>{{description.name}}</td>
-                            <td>{{description.description}}</td>
-                            <td>{{description.price}}</td>
-                            <td>{{description.StoreGame}}</td>
-                            <th>Link</th>
-
-
-
-                        </tr>
+                        
                         </thead>
+                        <tr *ngFor="let DescriptionGame of DescriptionGames">
+                            <td><img [src]="DescriptionGame.photo" width="150" height="150" /></td>
+                            <td>{{DescriptionGame.name}}</td>
+                         <td>{{DescriptionGame.description}}</td>
+                         <td>{{DescriptionGame.price}}</td>
+                         <td>{{DescriptionGame.storeGame}}</td>
+                         <td>{{DescriptionGame.link}}</td>
+
+                     
+                       
+                        </tr>
 
                     </table>
-                    <button type="button" class="btn btn-primary" routerLinkActive="/editProfile" routerLink="/editProfile">Edit Profile</button>
+
                 </div>
             </div>
         </div>
@@ -61,9 +62,12 @@
                 <input type="textarea" class="form-control" id="comment" formControlName="completed">
             </div>
 
-            <button type="submit" class="btn btn-success">Ok</button>
+            
+
+
 
         </form>
     </div>
+    
 
     </div>
