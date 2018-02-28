@@ -26,6 +26,7 @@ import { UsersService } from './services/users.service';
 import { CommentsService } from './services/comments.service';
 import { RegisterComponent } from './pages/register-page/register-page.component';
 import { ContentGamesComponent } from './pages/content-games/content-games.component';
+import { CommentsReviewComponent } from './pages/comments-review/comments-review.component';
 
 const ROUTES = [
     { path: '', component: HomePageComponent },
@@ -59,6 +60,10 @@ const ROUTES = [
     path: 'comments', component: CommentsComponent ,
 
   },
+    {
+      path: 'commentsreview', component: CommentsReviewComponent ,
+
+    },
   {
     path: '**', component: PageNotFoundComponent
   }
@@ -71,6 +76,7 @@ const ROUTES = [
       HomePageComponent,
       SearchGameListPageComponent,
       CommentsComponent,
+      CommentsReviewComponent,
       PageNotFoundComponent,
       SignInPageComponent,
       UserEditPageComponent,
