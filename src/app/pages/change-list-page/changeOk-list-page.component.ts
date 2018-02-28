@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ChangeOkListPageComponent implements OnInit {
   private changes: Change[] = [
-    new Change(1,"","","https://ugc.kn3.net/i/origin/http://www.noticiasdot.com/publicaciones/galerias/Nintendo/2007/NDS_Donkey-Kong-Jungle-Climber-wallpaper/NDS_Donkey-Kong-Jungle-Climber-wallpaper-02.jpg","",true),
+    new Change(1,"Donkey Kong","Adventure","https://ugc.kn3.net/i/origin/http://www.noticiasdot.com/publicaciones/galerias/Nintendo/2007/NDS_Donkey-Kong-Jungle-Climber-wallpaper/NDS_Donkey-Kong-Jungle-Climber-wallpaper-02.jpg","",true),
   ];
   constructor(public changeService: ChangeService,public router: Router) {
     
