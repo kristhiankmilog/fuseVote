@@ -154,7 +154,8 @@ const ROUTES = [
     AuthService,
     AppDataService,
     UsersService,
-    DescriptionGameService, 
+    DescriptionGameService,
+    ChangeService, 
     AppConfiguration],
   bootstrap: [AppComponent]
  })

@@ -29,13 +29,13 @@ export class CommentsComponent implements OnInit {
 onSubmit() {
   this.commentsService.create(
   this.commentsForm.get('name').value,
-    this.commentsForm.get('comment').value
+    this.commentsForm.get('description').value
     
 
   );
 
 
-  this.router.navigate(['/comments']);
+  this.router.navigate(['/commentsreview']);
 }
 
 }

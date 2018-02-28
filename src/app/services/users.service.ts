@@ -41,8 +41,8 @@ constructor(
 
 }
 
-registerUser(username: string, email: string, image: string, password: string, description:string) {
-  return this.post('user/', { username, email, image, password,description }).map(loginResponse => {
+registerUser(username: string, email: string, password: string,image: string, description:string) {
+  return this.post('user/', { username, email, password,image,description }).map(loginResponse => {
       if (loginResponse) {
 
 

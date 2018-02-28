@@ -19,6 +19,11 @@
         <a class="nav-link" routerLinkActive="/listexChanges" routerLink="/listexChanges">Games Exchange</a>
       </li>
       <li *ngIf="isLoggedIn()" class="nav-item">
+        <a class="nav-link" routerLinkActive="/listChanges" routerLink="/listChanges">List Games Exchange</a>
+      </li>      <li *ngIf="isLoggedIn()" class="nav-item">
+        <a class="nav-link" routerLinkActive="/editChanges" routerLink="/editChanges">Edit Games Exchange</a>
+      </li>
+      <li *ngIf="isLoggedIn()" class="nav-item">
         <a href="#" class="nav-link" (click)="signOut()">(Sign Out)</a>
       </li>
       </ul>
