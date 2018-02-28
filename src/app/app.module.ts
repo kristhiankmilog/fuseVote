@@ -28,6 +28,9 @@ import { RegisterComponent } from './pages/register-page/register-page.component
 import { ContentGamesComponent } from './pages/content-games/content-games.component';
 import { CommentsReviewComponent } from './pages/comments-review/comments-review.component';
 
+import { DescriptionGameService } from './services/descriptionGame.service';
+
+
 const ROUTES = [
     { path: '', component: HomePageComponent },
 
@@ -57,6 +60,7 @@ const ROUTES = [
 
 
   {
+
     path: 'comments', component: CommentsComponent ,
 
   },
@@ -104,6 +108,7 @@ const ROUTES = [
     AuthService,
     AppDataService,
     UsersService,
+    DescriptionGameService, 
     AppConfiguration],
   bootstrap: [AppComponent]
  })
