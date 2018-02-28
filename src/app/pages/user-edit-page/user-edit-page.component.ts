@@ -23,13 +23,15 @@ export class UserEditPageComponent implements OnInit {
     this.todoForm = this.formBuilder.group({
     firstname: '',
     lastname: '',
-    image: ''
+    image: '',
+    username:'',
+    description:''
   });
 
 }
 
 onSubmit() {
-  this.todoUser.create(
+  this.todoUser.registerUser(
     this.todoForm.get('firstname').value,
     this.todoForm.get('lastname').value,
     this.todoForm.get('image').value,

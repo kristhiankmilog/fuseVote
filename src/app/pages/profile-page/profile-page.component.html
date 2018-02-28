@@ -5,29 +5,31 @@
 <div class="container">
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading">  <h4 >User Profile</h4></div>
-            <div class="panel-body">
-                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                    <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive" width="200" height="200">
-
-
-                </div>
-                <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
-                    <div class="container" >
-                        <h2>John Doe</h2>
-                        <p>an   <b> Employee</b></p>
+            <div class="panel-heading">
+                <h4>User Profile</h4>
+            </div>
+                <div class="panel-body">
+                    <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                        <img src="user.image" width="200" height="200"  *ngFor="let user of users">
 
 
                     </div>
-                    <hr>
-                    <ul class="container details" >
-                        <li><p><b>User Name: </b>i.rudberg</p></li>
-                        <li><p><b>Email: </b>somerandom@email.com</p></li>
-                        <li><p><b>Description: </b>Hi ................</p></li>
-                    </ul>
-                   <hr>
-                    <button type="button" class="btn btn-primary" routerLinkActive="/editProfile" routerLink="/editProfile">Edit Profile</button>
+                    <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+                        <div class="container">
+                        </div>
+                        <hr>
+                        <ul class="container details">
+                            <table>
+                                <tr *ngFor="let user of users">
+                                    Name: <td>{{user.firstname}}</td>
+                                    Email: <td>{{user.email}}</td>
+                                </tr>
+                            </table>
+                        </ul>
+                        <hr>
+                        <button type="button" class="btn btn-primary" routerLinkActive="/editProfile" routerLink="/editProfile">Edit Profile</button>
+                    </div>
                 </div>
-            </div>
         </div>
+
     </div>
