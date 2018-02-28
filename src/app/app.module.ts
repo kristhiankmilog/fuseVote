@@ -9,8 +9,7 @@ import { AppComponent } from './app.component';
 
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
-import { TaskListPageComponent } from './pages/task-list-page/task-list-page.component';
-import { TaskEditPageComponent } from './pages/task-edit-page/task-edit-page.component';
+
 import { ChangeListPageComponent } from './pages/change-list-page/change-list-page.component';
 import { ChangeEditPageComponent } from './pages/change-edit-page/change-edit-page.component';
 
@@ -124,21 +123,17 @@ const ROUTES = [
       UserEditPageComponent,
       UserListPageComponent,
       RegisterComponent,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       ChangeListPageComponent,
       ExchangeListComponent,
       ChangeOkListPageComponent,
       CodeAcceptPageComponent,
       ChangeEditPageComponent,
 
-=======
       ProfilePageComponent,
       EditProfilePageComponent,
->>>>>>> ProfileConfiguration
-=======
+
       ContentGamesComponent,
->>>>>>> Game
   ],
   imports: [
     BrowserModule,
@@ -160,11 +155,7 @@ const ROUTES = [
     AuthService,
     AppDataService,
     UsersService,
-<<<<<<< HEAD
-    ChangeService,
-=======
     DescriptionGameService, 
->>>>>>> Game
     AppConfiguration],
   bootstrap: [AppComponent]
  })
