@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SearchGameListPageComponent} from './pages/searchGame-list-page/searchGame-list-page.component';
-import { SearchGameEditPageComponent} from './pages/searchGame-edit-page/searchGame-edit-page.component';
+import { CommentsComponent } from './pages/comments/comments.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { UserEditPageComponent } from './pages/user-edit-page/user-edit-page.component';
 import { UserListPageComponent } from './pages/user-list-page/user-list-page.component';
@@ -57,7 +57,7 @@ const ROUTES = [
 
 
   {
-    path: 'edit', component: SearchGameEditPageComponent ,
+    path: 'comment', component: CommentsComponent ,
     canActivate: [AuthService],
   },
   {
@@ -71,7 +71,7 @@ const ROUTES = [
       AppComponent,
       HomePageComponent,
       SearchGameListPageComponent,
-      SearchGameEditPageComponent,
+      CommentsComponent,
       PageNotFoundComponent,
       SignInPageComponent,
       UserEditPageComponent,
