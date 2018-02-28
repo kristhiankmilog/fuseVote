@@ -1,15 +1,11 @@
 export class Comment{
-    content: string;
-    rate:number;
-    id:number;
-    user:string;
+    description: string;
+   name:string;
 
 
-    constructor(content: string,rate:number,id:number,user:string){
-        this.content = content;
-        this.rate=rate;
-        this.id=id;
-        this.user=user
+    constructor(description: string,name:string){
+        this.description =description;
+        this.name=name
 
     }
 
