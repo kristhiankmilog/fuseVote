@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ChangeService } from '../../services/change.service';
+import {UsersService} from'../../services/users.service';
 import { Change } from '../../models/change';
 import { Router } from '@angular/router';
+import { Requests } from "../../models/requests";
 
 @Component({
   selector: 'app-change-list-page',
@@ -9,17 +10,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./change-list-page.component.css']
 })
 export class ChangeListPageComponent implements OnInit {
-  private changes: Change[] = [
-    new Change(1,"","","https://ugc.kn3.net/i/origin/http://www.noticiasdot.com/publicaciones/galerias/Nintendo/2007/NDS_Donkey-Kong-Jungle-Climber-wallpaper/NDS_Donkey-Kong-Jungle-Climber-wallpaper-02.jpg","",true),
-  ];
-  constructor(public changeService: ChangeService,public router: Router) {
+  private changes: Change[] = [];
+  private listRequests: Requests[] = [];
+
+  constructor(public usersService: UsersService, public router: Router) {
     
   }
 
   ngOnInit() {
-    this.changeService.list().subscribe(changeResponse => {
-    this.changes = changeResponse;
+    this.usersService.listChanges().subscribe(userResponse => {
+    this.changes = userResponse;
       })
+
+    //this.usersService.listRequests().subscribe(userResponse => {
+    //this.listRequests = userResponse;
+    //  })
+
   }
 
   

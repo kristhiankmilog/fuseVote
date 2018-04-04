@@ -6,11 +6,14 @@ import { Http } from "@angular/http";
 import { Observable } from 'rxjs/Observable';
 import { User } from "../models/user";
 import 'rxjs/add/observable/of';
+import { Change } from '../models/change';
+import { Requests } from "../models/requests";
 
 @Injectable()
 export class UsersService extends APIService {
   public cacheUser: User;
-
+  private cont = 0;
+  private changes: Change[] = [];
   public users: User[] = [
     // tslint:disable-next-line:max-line-length
     // tslint:disable-next-line:whitespace
@@ -36,43 +39,67 @@ constructor(
     return this.get(this.resourceUrl);
 
     }
-    create(id:number,firstname: string, lastname: string, image: string,username: string, description: string) {
-      return this.post(this.resourceUrl,new User(id,firstname,lastname,image,username,description));
+      create(id:number,firstname: string, lastname: string, image: string,username: string, description: string) {
+        return this.post(this.resourceUrl,new User(id,firstname,lastname,image,username,description));
 
-}
+  }
 
-registerUser(firstname: string, username: string, email: string, password: string,image: string, description:string) {
-  return this.post('user/', { firstname,username, email, password,image,description }).map(loginResponse => {
-      if (loginResponse) {
+  registerUser(firstname: string, username: string, email: string, password: string,image: string, description:string) {
+    return this.post('user/', { firstname,username, email, password,image,description }).map(loginResponse => {
+        if (loginResponse) {
 
 
 
-      }
-
-  });
-
-}
-getUserById(id: Number) {
-
-  return this.get('user/id/' + id);
-}
-updateUser(name: string, email: string, image: string, password: string) {
-  return this.post('user/updateprofile/' + this.cacheUser.id, { id: this.cacheUser.id, name: name, email: email,
-    image: image, password: password, confirmPassword: password}).map(updateResponse => {
-        if (updateResponse) { 
         }
+
     });
 
-}
+  }
+  getUserById(id: Number) {
 
-getUser(email:string){
+    return this.get('user/id/' + id);
+  }
+  updateUser(name: string, email: string, image: string, password: string) {
+    return this.post('user/updateprofile/' + this.cacheUser.id, { id: this.cacheUser.id, name: name, email: email,
+      image: image, password: password, confirmPassword: password}).map(updateResponse => {
+          if (updateResponse) { 
+          }
+      });
 
-  return this.get(this.resourceUrl+'/'+email)
+  }
 
-}
-currentUser(){
+  getUser(email:string){
 
-  return this.get(this.resourceUrl+'/'+sessionStorage.getItem("email"));
+    return this.get(this.resourceUrl+'/'+email)
 
-}
+  }
+  currentUser(){
+
+    return this.get(this.resourceUrl+'/'+sessionStorage.getItem("email"));
+
+  }
+
+  listChanges(): Observable<Change[]> {
+    return this.get('user/changes/'+sessionStorage.getItem("email"));
+  }
+
+
+  createChange(value0:string,value1:string,value2:string,value3:string,bool:boolean):Observable<Change>{
+    this.cont+=1;
+    return this.post('user/changes/'+sessionStorage.getItem("email"),new Change(this.cont,value0,value1,value2,value3,bool));
+
+  }
+
+  listAllChanges(): Observable<Change[]> {
+    return this.get('user/changes');
+  }
+
+  //createRequests(userRq:String,change1:String,change2:String):Observable<Requests>{
+  //  return this.post('user/requests/'+this.cacheUser.id,new Requests(userRq,change1,change2));
+  //}
+
+  //listRequests(): Observable<Requests[]> {
+  //  return this.get('user/requests/'+this.cacheUser.id);
+  //}
+
 }

@@ -33,7 +33,6 @@ import { HttpModule } from '@angular/http';
 import { SignInPageComponent } from './pages/sign-in/sign-in-page.component';
 import { AuthService } from './common/auth.service';
 import { AppDataService } from './common/app-data.service';
-import { ChangeService } from './services/change.service';
 import { UsersService } from './services/users.service';
 import { CommentsService } from './services/comments.service';
 import { RegisterComponent } from './pages/register-page/register-page.component';
@@ -155,7 +154,6 @@ const ROUTES = [
     AppDataService,
     UsersService,
     DescriptionGameService,
-    ChangeService, 
     AppConfiguration],
   bootstrap: [AppComponent]
  })
