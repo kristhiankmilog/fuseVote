@@ -20,8 +20,8 @@
       <input type="password" class="form-control" id="alterEgo" formControlName="password" required>
     </div>
     <br>
-    <button type="submit" class="btn btn-success" [disabled]="!signInForm.valid">SIGN IN</button>
-
+    <button id="boton" type="submit" class="btn btn-success" [disabled]="!signInForm.valid">SIGN IN</button>
+ 
 
     <p class="text-danger mt-1" *ngIf="loginError">{{loginError}}</p>
   </form>

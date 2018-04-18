@@ -32,11 +32,11 @@
         <ul class="navbar-nav mr-auto">
 
           <li *ngIf="!isLoggedIn()" class="nav-item active">
-            <a class="nav-link"  routerLinkActive="/register" routerLink="/register">REGISTER<span class="sr-only">(current)</span></a>
+            <button id="boton"  routerLinkActive="/register" routerLink="/register">Register<span class="sr-only">(current)</span></button>
           </li>
 
           <li *ngIf="!isLoggedIn()" class="nav-item active">
-            <a class="nav-link" routerLinkActive="/signin" routerLink="/signin">SIGN IN<span class="sr-only">(current)</span></a>
+            <button id="boton" routerLinkActive="/signin" routerLink="/signin">Sign In<span class="sr-only">(current)</span></button>
           </li>
 
         </ul>

@@ -1,6 +1,4 @@
-body {
-  min-height: 75rem;
-  padding-top: 4.5rem;
-  background-image: url(assets/images/mario.jpg);
-  background: linear-gradient(to bottom, #33cc33 -15%, #66ccff 39%);
+#fondo {
+  background-image: url("fondos.jpg");
+  background-size: 25%;
 }
