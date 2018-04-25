@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
 export class CodeAcceptPageComponent implements OnInit {
 
   constructor(public router: Router) { }
+  private change2: string[];
 
   ngOnInit() {
+    this.change2=sessionStorage.getItem("forchange").split(",");
+    window.alert(this.change2[0]);
   }
 
   myEvent(event) {

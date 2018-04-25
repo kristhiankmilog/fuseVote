@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
 export class ExchangeListComponent implements OnInit {
 
   private exchanges: Change[] = [];
-  
- 
+  private change1: string;
+  private change3: string[];
      constructor(public usersService: UsersService, public router: Router) {
        
      }
@@ -25,7 +25,14 @@ export class ExchangeListComponent implements OnInit {
          })
      }
  
-   myEvent(event,change:Change) {
+   myEvent(event) {
+
+    this.change1 =(<HTMLInputElement>document.getElementById("tochange")).value;
+    sessionStorage.setItem("tochange", this.change1);
+
+    this.change3=sessionStorage.getItem("tochange").split(",");
+    window.alert(this.change3[0]);
+
      this.router.navigate(['/okChanges']);
    }
 

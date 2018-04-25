@@ -25,7 +25,7 @@
         <td>{{change.nameGame}}</td>
         <td>{{change.description}}</td>
         <td><img [src]="change.image" width="150" height="150" /></td>
-        <td><button (click)="myEvent($event)" type="submit" class="btn btn-success" value="change">Exchange</button></td>
+        <td><button (click)="myEvent($event)" id="tochange" type="submit" class="btn btn-success" value="{{change.user}},{{change.nameGame}},{{change.image}}" >Exchange</button></td>
     </tr>
     </table>
   </div>

@@ -9,23 +9,29 @@ import {UsersService} from'../../services/users.service';
   styleUrls: ['./change-list-page.component.css']
 })
 export class ChangeOkListPageComponent implements OnInit {
-  private changes: Change[] = [];
-  private change1: Change;
+  private changes2: Change[] = [];
+  private change2: string[];
+  private change1: string;
+  
   constructor(public usersService: UsersService,public router: Router) {
-    
   }
 
   ngOnInit() {
     this.usersService.listChanges().subscribe(userResponse => {
-    this.changes = userResponse;
+    this.changes2 = userResponse;
       })
+    
+    
   }
 
   createRequest(change1:Change){
-    this.change1=change1;
+    
   }
 
   myEvent(event) {
+    this.change1 =(<HTMLInputElement>document.getElementById("forchange")).value;
+    sessionStorage.setItem("forchange", this.change1);
+    
     this.router.navigate(['/code']);
   }
 

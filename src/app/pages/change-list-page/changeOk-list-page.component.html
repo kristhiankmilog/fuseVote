@@ -20,11 +20,11 @@
           <th>Add</th>
         </tr>
       </thead>
-      <tr *ngFor="let change of changes">
-        <td>{{change.nameGame}}</td>
-        <td>{{change.description}}</td>
-        <td><img [src]="change.image" width="150" height="150" /></td>
-        <td><button (click)="myEvent($event)" type="submit" class="btn btn-success">Exchange</button></td>
+      <tr *ngFor="let change2 of changes2">
+        <td>{{change2.nameGame}}</td>
+        <td>{{change2.description}}</td>
+        <td><img [src]="change2.image" width="150" height="150" /></td>
+        <td><button (click)="myEvent($event)" id="forchange" type="submit" class="btn btn-success" value="{{change2.user}},{{change2.nameGame}},{{change2.image}}" >Exchange</button></td>
       </tr>
     </table>
   </div>
