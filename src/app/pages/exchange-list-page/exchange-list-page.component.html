@@ -1,16 +1,32 @@
-<h2>My exchanges</h2>
-<table class="table table-bordered">
- <thead>
-   <tr>
-     <th>Name Game</th>
-     <th>Description</th>
-     <th>Image</th>
-   </tr>
- </thead>
- <tr *ngFor="let change of exchanges">
-    <td>{{change.nameGame}}</td>
-    <td>{{change.description}}</td>
-    <td><img [src]="change.image" width="150" height="150" /></td>
-    <td><button (click)="myEvent($event)" type="submit" class="btn btn-success" value="change">Exchange</button></td>
- </tr>
-</table>
+<div class="container">
+    <div>
+      <div id="centerbrand">
+          <img id="brand"  src="/assets/images/videojuegos.jpeg" width="170" height="100">
+          
+          
+      </div>
+      <h2>All Exchanges</h2>
+      <br>
+      
+    </div>
+  
+  <div>
+    <table id="tabla" class="table table-bordered">
+    <thead>
+      <tr>
+          <th>User</th>
+        <th>Name Game</th>
+        <th>Description</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let change of exchanges">
+        <td>{{change.user}}</td>
+        <td>{{change.nameGame}}</td>
+        <td>{{change.description}}</td>
+        <td><img [src]="change.image" width="150" height="150" /></td>
+        <td><button (click)="myEvent($event)" type="submit" class="btn btn-success" value="change">Exchange</button></td>
+    </tr>
+    </table>
+  </div>
+</div>

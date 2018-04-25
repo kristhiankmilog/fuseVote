@@ -30,6 +30,7 @@ export class ChangeEditPageComponent implements OnInit {
 }
 
 onSubmit() {
+  window.alert("Congratulations, You have successfully added a game!");
   this.usersService.createChange(
     this.changeForm.get('nameGame').value,
     this.changeForm.get('description').value,
