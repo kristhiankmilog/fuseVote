@@ -31,7 +31,7 @@ export class ExchangeListComponent implements OnInit {
     sessionStorage.setItem("tochange", this.change1);
 
     this.change3=sessionStorage.getItem("tochange").split(",");
-    window.alert(this.change3[0]);
+    console.log(this.change3[0]);
 
      this.router.navigate(['/okChanges']);
    }

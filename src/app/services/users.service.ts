@@ -7,12 +7,13 @@ import { Observable } from 'rxjs/Observable';
 import { User } from "../models/user";
 import 'rxjs/add/observable/of';
 import { Change } from '../models/change';
-import { Requests } from "../models/requests";
+import { Exrequests } from "../models/exrequests";
 
 @Injectable()
 export class UsersService extends APIService {
   public cacheUser: User;
   private cont = 0;
+  private contr =0;
   private changes: Change[] = [];
   public users: User[] = [
     // tslint:disable-next-line:max-line-length
@@ -91,15 +92,16 @@ constructor(
   }
 
   listAllChanges(): Observable<Change[]> {
-    return this.get('user/changes');
+    return this.get('user/exchanges/'+sessionStorage.getItem("email"));
   }
 
-  //createRequests(userRq:String,change1:String,change2:String):Observable<Requests>{
-  //  return this.post('user/requests/'+this.cacheUser.id,new Requests(userRq,change1,change2));
-  //}
+  createRequests(userRq:String,change1Game: String,change1:String,change2:String):Observable<Exrequests>{
+    this.contr+=1;
+    return this.post('user/requests/'+sessionStorage.getItem("email"),new Exrequests(this.contr,userRq,change1Game,change1,change2));
+  }
 
-  //listRequests(): Observable<Requests[]> {
-  //  return this.get('user/requests/'+this.cacheUser.id);
-  //}
+  listRequests(): Observable<Exrequests[]> {
+    return this.get('user/requests/'+sessionStorage.getItem("email"));
+  }
 
 }

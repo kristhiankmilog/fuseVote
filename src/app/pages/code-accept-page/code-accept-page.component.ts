@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {UsersService} from'../../services/users.service';
 
 @Component({
   selector: 'app-code-accept-page',
@@ -8,12 +9,15 @@ import { Router } from '@angular/router';
 })
 export class CodeAcceptPageComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  constructor(public usersService: UsersService,public router: Router) { }
   private change2: string[];
+  private request1: string[];
 
   ngOnInit() {
     this.change2=sessionStorage.getItem("forchange").split(",");
-    window.alert(this.change2[0]);
+    console.log(this.change2[0]+"---------------------------------");
+    this.request1=sessionStorage.getItem("tochange").split(",");
+    this.usersService.createRequests(this.request1[0],this.request1[1],this.request1[2],this.change2[2]);
   }
 
   myEvent(event) {

@@ -10,7 +10,8 @@ import {UsersService} from'../../services/users.service';
 })
 export class ChangeOkListPageComponent implements OnInit {
   private changes2: Change[] = [];
-  private change2: string[];
+  private request1: string[];
+  private request2: string[];
   private change1: string;
   
   constructor(public usersService: UsersService,public router: Router) {
@@ -24,13 +25,16 @@ export class ChangeOkListPageComponent implements OnInit {
     
   }
 
-  createRequest(change1:Change){
-    
-  }
-
   myEvent(event) {
     this.change1 =(<HTMLInputElement>document.getElementById("forchange")).value;
     sessionStorage.setItem("forchange", this.change1);
+
+    this.request1=sessionStorage.getItem("tochange").split(",");
+    console.log(this.request1[0]);
+
+    this.request2=sessionStorage.getItem("forchange").split(",");
+    console.log(this.request2[0]);
+
     
     this.router.navigate(['/code']);
   }
