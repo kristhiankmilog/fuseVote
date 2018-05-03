@@ -10,14 +10,20 @@ import {UsersService} from'../../services/users.service';
 export class CodeAcceptPageComponent implements OnInit {
 
   constructor(public usersService: UsersService,public router: Router) { }
-  private change2: string[];
   private request1: string[];
+  private request2: string[];
+  private change1: string;
+  private description = "esto es una prueba"
 
   ngOnInit() {
-    this.change2=sessionStorage.getItem("forchange").split(",");
-    console.log(this.change2[0]+"---------------------------------");
+    
     this.request1=sessionStorage.getItem("tochange").split(",");
-    this.usersService.createRequests(this.request1[0],this.request1[1],this.request1[2],this.change2[2]);
+    console.log(this.request1[0]);
+
+    this.request2=sessionStorage.getItem("forchange").split(",");
+    console.log(this.request2[0]);
+
+    this.usersService.createRequests(this.request1[0],this.request1[1],this.request1[2],this.request2[2]);
   }
 
   myEvent(event) {

@@ -28,6 +28,11 @@ export class ChangeListPageComponent implements OnInit {
 
   }
 
+  newExchange (event) {
+
+      this.router.navigate(['/editChanges']);
+   }
+
   
 
 }

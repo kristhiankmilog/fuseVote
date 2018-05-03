@@ -1,7 +1,18 @@
-<h1>Code Accept</h1>
+<h1>Your Request</h1>
 <br>
 <br>
-<img src="/assets/images/QR.png" width="150" height="150" />
+<div class="container">
+    <p for="toChange"><b>To change:</b></p>
+    <label id="aboutYou">{{request1[0]}}</label>
+    <img [src]="request1[1]" width="150" height="150" />
+</div>
+<br>
+<br>
+<div class="container">
+    <p for="toChange"><b>To change:</b></p>
+    <label id="aboutYou">{{request2[0]}}</label>
+    <img [src]="request2[1]" width="150" height="150" />
+</div>
 <br>
 <br>
 <p>This QR code is to confirm the transaction, and to make a claim.</p>
