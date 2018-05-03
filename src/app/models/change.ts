@@ -6,6 +6,7 @@ export class Change {
     private state: string;
     private accept: boolean;
     private user: String;
+    private datep: Date;
 
     constructor(id: number, 
                 nameGame: string, 
@@ -13,7 +14,8 @@ export class Change {
                 image: string, 
                 state: string, 
                 accept: boolean,
-                user: string) {
+                user: string,
+                datep: Date) {
 
         this.id = id;
         this.nameGame = nameGame;
@@ -22,5 +24,6 @@ export class Change {
         this.state = state;
         this.accept = accept;
         this.user=user;
+        this.datep=datep;
     }
 }

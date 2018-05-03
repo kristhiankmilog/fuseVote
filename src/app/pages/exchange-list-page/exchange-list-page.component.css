@@ -43,4 +43,11 @@
     background: rgb(0, 0, 0);
     color: rgba(255, 255, 255, 0.788);
     box-shadow: inset 0 0 0 3px rgba(168, 169, 172, 0.788);
-   }
+}
+
+
+h2{
+    position: absolute;
+    top:  125px; 
+    left:  450px;
+}

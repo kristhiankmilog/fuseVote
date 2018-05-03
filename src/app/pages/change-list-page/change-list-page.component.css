@@ -69,3 +69,9 @@
     top:  125px; 
     right:  75px;
 }
+
+h2{
+    position: absolute;
+    top:  125px; 
+    left:  450px;
+}

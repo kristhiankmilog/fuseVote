@@ -23,11 +23,18 @@ export class CodeAcceptPageComponent implements OnInit {
     this.request2=sessionStorage.getItem("forchange").split(",");
     console.log(this.request2[0]);
 
-    this.usersService.createRequests(this.request1[0],this.request1[1],this.request1[2],this.request2[2]);
+    
   }
 
-  myEvent(event) {
-    this.router.navigate(['/listexChanges']);
+  createExrequest(){
+    console.log("se pulso boton *-*-*-*-*-*-*-*-*-*-*-");
+    this.usersService.createExrequests(this.request1[0],this.request1[1],this.request1[2],this.request2[2]);
+  }
+
+  acceptR(event) {
+    
+    this.createExrequest();
+    this.router.navigate(['/listChanges']);
   }
 
 }

@@ -87,7 +87,8 @@ constructor(
 
   createChange(value0:string,value1:string,value2:string,value3:string,bool:boolean):Observable<Change>{
     this.cont+=1;
-    return this.post('user/changes/'+sessionStorage.getItem("email"),new Change(this.cont,value0,value1,value2,value3,bool,sessionStorage.getItem("email")));
+    var Currentdates = new Date();
+    return this.post('user/changes/'+sessionStorage.getItem("email"),new Change(this.cont,value0,value1,value2,value3,bool,sessionStorage.getItem("email"),Currentdates));
 
   }
 
@@ -95,13 +96,14 @@ constructor(
     return this.get('user/exchanges/'+sessionStorage.getItem("email"));
   }
 
-  createRequests(userRq:String,change1Game: String,change1:String,change2:String):Observable<Exrequests>{
+  createExrequests(userRq:String,change1Game: String,change1:String,change2:String):Observable<Exrequests>{
+    console.log(""+userRq+change1Game+change1+change2+"Entro hacer request ************************");
     this.contr+=1;
-    return this.post('user/requests/'+sessionStorage.getItem("email"),new Exrequests(this.contr,userRq,change1Game,change1,change2));
+    return this.post('user/exrequests/'+sessionStorage.getItem("email"),new Exrequests(this.contr,userRq,change1Game,change1,change2));
   }
 
   listRequests(): Observable<Exrequests[]> {
-    return this.get('user/requests/'+sessionStorage.getItem("email"));
+    return this.get('user/exrequests/'+sessionStorage.getItem("email"));
   }
 
 }

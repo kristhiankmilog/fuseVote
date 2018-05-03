@@ -1,21 +1,45 @@
-<h1>Your Request</h1>
-<br>
-<br>
-<div class="container">
-    <p for="toChange"><b>To change:</b></p>
-    <label id="aboutYou">{{request1[0]}}</label>
-    <img [src]="request1[1]" width="150" height="150" />
-</div>
-<br>
+
 <br>
 <div class="container">
     <p for="toChange"><b>To change:</b></p>
-    <label id="aboutYou">{{request2[0]}}</label>
-    <img [src]="request2[1]" width="150" height="150" />
+    <table id="tabla" class="table table-bordered">
+            <thead>
+                <tr>
+                <th>User</th>
+                <th>Name Game</th>
+                <th>image</th>
+                
+                </tr>
+            </thead>
+            <tr>
+                <td>{{request1[0]}}</td>
+                <td>{{request1[1]}}</td>
+                <td><img [src]="request1[2]" width="75" height="75" /></td>
+                
+            </tr>
+        </table>
+</div>
+<br>
+
+<div class="container">
+    <p for="toChange"><b>For change:</b></p>
+    <table id="tabla" class="table table-bordered">
+        <thead>
+            <tr>
+            <th>User</th>
+            <th>Name Game</th>
+            <th>image</th>
+            
+            </tr>
+        </thead>
+        <tr>
+            <td>{{request2[0]}}</td>
+            <td>{{request2[1]}}</td>
+            <td><img [src]="request2[2]" width="75" height="75" /></td>
+            
+        </tr>
+    </table>   
 </div>
 <br>
 <br>
-<p>This QR code is to confirm the transaction, and to make a claim.</p>
-<br>
-<br>
-<button (click)="myEvent($event)" type="submit" class="btn btn-success">Accept</button>
+<button id="tochange" (click)="acceptR($event)" type="submit">Accept</button>

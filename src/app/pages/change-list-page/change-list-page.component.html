@@ -17,7 +17,7 @@
     <table id="tabla" class="table table-bordered">
     <thead>
       <tr>
-        <th>Id</th>
+        <th>Date</th>
         <th>Name Game</th>
         <th>Description</th>
         <th>Image</th>
@@ -25,7 +25,7 @@
       </tr>
     </thead>
     <tr *ngFor="let change of changes">
-      <td >{{change.id}}</td>
+      <td >{{change.datep | date:'dd-MM-yyyy'}}</td>
       <td >{{change.nameGame}}</td>
       <td >{{change.description}}</td>
       <td ><img [src]="change.image" width="150" height="150" /></td>
