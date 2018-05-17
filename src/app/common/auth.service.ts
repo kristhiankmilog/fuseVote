@@ -21,6 +21,14 @@ constructor(public router: Router, public appData: AppDataService) { }
     return this.appData.accessToken != null && this.appData.accessToken !== undefined;
   }
 
+  public isLoggedInCandidate(): boolean {
+    return this.appData.accessToken != null && this.appData.accessToken !== undefined;
+  }
+
+  public isLoggedInUser(): boolean {
+    return this.appData.accessToken != null && this.appData.accessToken !== undefined;
+  }
+
   public signOut() {
     this.appData.removeAccessToken();
     this.router.navigate(['']);

@@ -6,19 +6,18 @@ import { Http } from "@angular/http";
 import { Observable } from 'rxjs/Observable';
 import { User } from "../models/user";
 import 'rxjs/add/observable/of';
-import { Change } from '../models/change';
-import { Exrequests } from "../models/exrequests";
+import { Candidate } from '../models/candidate';
+
 
 @Injectable()
 export class UsersService extends APIService {
   public cacheUser: User;
   private cont = 0;
   private contr =0;
-  private changes: Change[] = [];
+  
   public users: User[] = [
-    // tslint:disable-next-line:max-line-length
-    // tslint:disable-next-line:whitespace
-    new User(1,'Camilo','Garcia','http://farm6.static.flickr.com/5178/5428759578_d6fb2288a4.jpg','Souls','Gamer'),
+    
+    
   ];
   private resourceUrl = 'user';
 constructor(
@@ -40,8 +39,21 @@ constructor(
     return this.get(this.resourceUrl);
 
     }
-      create(id:number,firstname: string, lastname: string, image: string,username: string, description: string) {
-        return this.post(this.resourceUrl,new User(id,firstname,lastname,image,username,description));
+      
+
+  
+
+
+  registerCandidate(name: string, lastname: string, politic: string, description: string,image: string,email: string, password:string) {
+    
+    return this.post('user/', { name, lastname, politic,description,image,}).map(loginResponse => {
+        if (loginResponse) {
+
+
+
+        }
+
+    });
 
   }
 
@@ -99,7 +111,7 @@ constructor(
   createExrequests(userRq:String,change1Game: String,change1:String,change2:String):Observable<Exrequests>{
     console.log(""+userRq+change1Game+change1+change2+"Entro hacer request ************************");
     this.contr+=1;
-    return this.post('user/exrequests/'+sessionStorage.getItem("email"),new Exrequests(this.contr,userRq,change1Game,change1,change2));
+    return this.post('user/exrequest/'+sessionStorage.getItem("email"),new Exrequests("1",userRq,change1Game,change1,change2,"pending"));
   }
 
   listRequests(): Observable<Exrequests[]> {

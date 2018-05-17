@@ -3,20 +3,24 @@ export class User {
 
     private _name: string;
 
+    private _lastname: string;
+
     private _email: string;
 
-    private _image: string;
+    private _borndate: string;
 
     private _password: string;
 
 
-    constructor(id: Number, name: string, email: string, image: string,  password: string, confirmPassword: string) {
+    constructor(id: Number, name: string, lastname: string, email: string, borndate: string,  password: string, confirmPassword: string) {
 
         this._name = name;
 
+        this._lastname = lastname;
+
         this._email = email;
 
-        this._image = image;
+        this._borndate = borndate;
 
         this._password = password;
 
@@ -63,15 +67,15 @@ export class User {
 
     }
 
-    get image(): string {
+    get borndate(): string {
 
-      return this._image;
+      return this._borndate;
 
     }
 
-    set image(value: string) {
+    set borndate(value: string) {
 
-      this._image = value;
+      this._borndate = value;
 
     }
 

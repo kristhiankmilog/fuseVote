@@ -1,0 +1,10 @@
+.container{
+    position: relative;
+    
+    align-content: center;
+    background-color: rgba(120, 120, 122, 0.788);
+    color: rgb(255, 255, 255);
+    padding: 80px 25px;
+    font-family: 'fantasy';
+    text-align: left;
+}

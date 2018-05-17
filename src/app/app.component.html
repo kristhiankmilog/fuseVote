@@ -3,25 +3,29 @@
     aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  <a class="navbar-brand" href="#">BrotherGames</a>
+  <a class="navbar-brand" href="#">FuseVote</a>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="/" routerLink="/">Home</a>
       </li>
-      <li *ngIf="isLoggedIn()" class="nav-item">
-        <a class="nav-link" routerLinkActive="/profile" routerLink="/profile">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="/searchGames" routerLink="/searchGames">Games <span class="sr-only">(current)</span></a>
-      </li>
-      <li *ngIf="isLoggedIn()" class="nav-item">
-        <a class="nav-link" routerLinkActive="/listChanges" routerLink="/listChanges">My Exchanges</a>
-      </li>
       
+      
+      <!-- Pestañas mostradas para Administrador -->
       <li *ngIf="isLoggedIn()" class="nav-item">
-        <a class="nav-link" routerLinkActive="/listexChanges" routerLink="/listexChanges">All Exchanges</a>
+        <a class="nav-link" routerLinkActive="/NewCandidate" routerLink="/NewCandidate">New Candidate</a>
       </li>
+
+      <!-- Pestañas mostradas a candidatos-->
+      <li *ngIf="isLoggedInCandidate()" class="nav-item">
+          <a class="nav-link" routerLinkActive="/UpdateInfo" routerLink="/UpdateInfo">Update Info</a>
+      </li>
+
+      <!-- Pestañas mostradas a usuarios-->
+      <li *ngIf="isLoggedInUser()" class="nav-item">
+          <a class="nav-link" routerLinkActive="/Vote" routerLink="/Vote">Vote</a>
+      </li>
+
       <li *ngIf="isLoggedIn()" class="nav-item">
         <a href="#" class="nav-link" (click)="signOut()">(Sign Out)</a>
       </li>
