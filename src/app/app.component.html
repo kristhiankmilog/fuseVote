@@ -17,12 +17,12 @@
       </li>
 
       <!-- Pestañas mostradas a candidatos-->
-      <li *ngIf="isLoggedInCandidate()" class="nav-item">
+      <li *ngIf="isLoggedIn()" class="nav-item">
           <a class="nav-link" routerLinkActive="/UpdateInfo" routerLink="/UpdateInfo">Update Info</a>
       </li>
 
       <!-- Pestañas mostradas a usuarios-->
-      <li *ngIf="isLoggedInUser()" class="nav-item">
+      <li *ngIf="isLoggedIn()" class="nav-item">
           <a class="nav-link" routerLinkActive="/Vote" routerLink="/Vote">Vote</a>
       </li>
 

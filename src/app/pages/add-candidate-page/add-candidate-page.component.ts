@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsersService } from '../../services/users.service';
+import { CandidateService } from '../../services/candidate.service';
 
 @Component({
     selector: 'app-add-candidate-page',
@@ -14,7 +14,7 @@ export class AddCandidateComponent implements OnInit {
     registerForm: FormGroup;
 
     constructor(
-        public todoUser: UsersService,
+        public candidate: CandidateService,
         public formBuilder: FormBuilder,
         public router: Router,
     ) {
@@ -33,7 +33,7 @@ export class AddCandidateComponent implements OnInit {
     }
 
     onSubmit() {
-        this.todoUser.registerCandidate(
+        this.candidate.registerCandidate(
             this.registerForm.get('firstname').value,
             this.registerForm.get('lastname').value,
             this.registerForm.get('politic').value,

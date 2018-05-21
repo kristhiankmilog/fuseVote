@@ -14,8 +14,12 @@ export class Candidate {
 
     private _password: string;
 
+    private _tittle: string;
 
-    constructor( name: string, lastname: string, politic: string, description: string,  image: string, email: string,password: string ) {
+    private _proposal: string;
+
+
+    constructor( name: string, lastname: string, politic: string, description: string,  image: string, email: string,password: string,tittle: string,proposal: string ) {
 
         this._name = name;
 
@@ -30,6 +34,10 @@ export class Candidate {
         this._email = email;
 
         this._password = password;
+
+        this._tittle = tittle;
+
+        this._proposal = proposal;
 
         
     }
@@ -107,6 +115,30 @@ export class Candidate {
     set password(value: string) {
 
       this._password = value;
+
+    }
+
+    get tittle(): string {
+
+      return this._tittle;
+
+    }
+
+    set tittle(value: string) {
+
+      this._tittle = value;
+
+    }
+
+    get proposal(): string {
+
+      return this._proposal;
+
+    }
+
+    set proposal(value: string) {
+
+      this._tittle = value;
 
     }
     

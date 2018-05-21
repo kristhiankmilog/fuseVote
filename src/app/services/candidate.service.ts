@@ -10,7 +10,7 @@ import { Candidate } from '../models/candidate';
 
 
 @Injectable()
-export class UsersService extends APIService {
+export class CandidateService extends APIService {
   public cacheUser: User;
   private cont = 0;
   private contr =0;
@@ -19,7 +19,7 @@ export class UsersService extends APIService {
     
     
   ];
-  private resourceUrl = 'user';
+  private resourceUrl = 'candidate';
 constructor(
     public config: AppConfiguration,
     public authService: AuthService,
@@ -28,50 +28,39 @@ constructor(
     super(config, authService, http);
   }
 
-  login(email: string, password: string) {
-    
-    return this.post('user/login', { email, password }, { credentials: false }).map(loginResponse => {
-      if (loginResponse) {
-        this.authService.accessToken = loginResponse.accessToken;
-      }
-    });
-  }
   list(): Observable<User[]> {
     return this.get(this.resourceUrl);
 
     }
       
 
-
-  registerUser(id: Number, firstname: string, lastname: string, email: string,password: string, bornDate: string,   statevote: boolean) {
-    return this.post('user/', { id,firstname, lastname, email, password,bornDate,statevote}).map(loginResponse => {
-        if (loginResponse) {
+  
 
 
-
-        }
-
-    });
+  registerCandidate(name: string, lastname: string, politic: string, description: string,image: string,email: string, password:string) {
+  
+    return this.post(this.resourceUrl, { name, lastname, politic,description,image,});
 
   }
+
+  addProposal(tittle: string, description: string){
+    return this.post(this.resourceUrl+'/proposal'+sessionStorage.getItem("email"),{tittle,description});
+  }
+
+
   getUserById(id: Number) {
 
     return this.get('user/id/' + id);
   }
-  updateUser(name: string, email: string, image: string, password: string) {
-    return this.post('user/updateprofile/' + this.cacheUser.id, { id: this.cacheUser.id, name: name, email: email,
-      image: image, password: password, confirmPassword: password}).map(updateResponse => {
-          if (updateResponse) { 
-          }
-      });
 
-  }
+  
 
   getUser(email:string){
 
     return this.get(this.resourceUrl+'/'+email)
 
   }
+
   currentUser(){
 
     return this.get(this.resourceUrl+'/'+sessionStorage.getItem("email"));

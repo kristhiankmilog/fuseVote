@@ -1,0 +1,26 @@
+<div class="container">
+  <br>
+  <div id="centerbrand">
+
+    <img id="brand"  src="/assets/images/escudo.png" width="170" height="100">
+  </div>
+  <br>
+  <h2 class="text-center">Sign In FuseVote</h2>
+  <br>
+  <br>
+  <form [formGroup]="signInForm" (ngSubmit)="doLogin()" novalidate>
+
+    <div class="form-group">
+      <label  for="description">Tittle</label>
+      <input type="text" class="form-control" id="tittle" formControlName="tittle" required>
+    </div>
+
+    <div class="form-group">
+      <label for="priority">Description</label>
+      <input type="text" class="form-control" id="description" formControlName="description" required>
+    </div>
+    <br>
+    <button id="boton" type="submit" class="btn btn-success" >Add Proposal</button>
+    
+  </form>
+</div>

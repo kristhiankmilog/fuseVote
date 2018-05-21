@@ -23,23 +23,24 @@ export class RegisterComponent implements OnInit {
 
     ngOnInit() {
         this.registerForm = this.formBuilder.group({
+            Id: '',
             firstname:'',
-            username: '',
+            lastname: '',
             email: '',
             password: '',
-            image: '',
-            description: ''
+            bornDate: ''
         });
     }
 
     onSubmit() {
         this.todoUser.registerUser(
-            this.registerForm.get('firstname').value,
-        this.registerForm.get('username').value,
+        this.registerForm.get('Id').value,
+        this.registerForm.get('firstname').value,
+        this.registerForm.get('lastname').value,
         this.registerForm.get('email').value,
         this.registerForm.get('password').value,
-        this.registerForm.get('image').value,
-        this.registerForm.get('description').value
+        this.registerForm.get('bornDate').value,
+        false
         ).subscribe(serverResponse=>{
             this.router.navigate(['/signin']);
         }, error=>{

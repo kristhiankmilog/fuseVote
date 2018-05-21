@@ -11,8 +11,10 @@ export class User {
 
     private _password: string;
 
+    private _statevote:boolean;
 
-    constructor(id: Number, name: string, lastname: string, email: string, borndate: string,  password: string, confirmPassword: string) {
+
+    constructor(id: Number, name: string, lastname: string, email: string, borndate: string,  password: string) {
 
         this._name = name;
 
@@ -25,6 +27,8 @@ export class User {
         this._password = password;
 
         this._id = id;
+
+        this._statevote = false;
     }
 
     get id(): Number {
@@ -91,4 +95,17 @@ export class User {
 
     }
     
+
+    get statevote(): boolean {
+
+      return this._statevote;
+
+    }
+
+    set statevote(value: boolean) {
+
+      this._statevote = value;
+
+    }
+
 }
